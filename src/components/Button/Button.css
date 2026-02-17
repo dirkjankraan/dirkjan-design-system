@@ -1,0 +1,90 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease, filter 0.15s ease;
+}
+
+/* ── Sizes ── */
+.btn--sm {
+  gap: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn--md {
+  gap: 4px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn--lg {
+  gap: 6px;
+  padding: 10px 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* ── Variants ── */
+.btn--primary {
+  background-color: #7f56d9;
+  color: #ffffff;
+  border: none;
+}
+
+.btn--primary:hover:not(:disabled) {
+  filter: brightness(0.92);
+}
+
+.btn--secondary {
+  background-color: #ffffff;
+  color: #6941c6;
+  border: 1px solid #d6bbfb;
+}
+
+.btn--secondary:hover:not(:disabled) {
+  background-color: #f9f5ff;
+}
+
+.btn--ghost {
+  background-color: transparent;
+  color: #535862;
+  border: none;
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* ── Disabled ── */
+.btn:disabled,
+.btn--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Icons ── */
+.btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.btn__icon svg {
+  width: 20px;
+  height: 20px;
+}
