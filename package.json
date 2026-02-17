@@ -1,5 +1,5 @@
 {
-  "name": "sparkles-design-system",
+  "name": "dirkjan-design-system",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_992fdb2a9a4086b"
   },
   "keywords": [],
   "author": "",
