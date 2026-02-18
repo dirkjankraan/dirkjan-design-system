@@ -96,6 +96,37 @@ export const WithBothIcons: Story = {
   },
 };
 
+// ── States (Primary) ──
+
+export const PrimaryFocused: Story = {
+  name: 'Primary – Focused',
+  args: {
+    variant: 'primary',
+    size: 'md',
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    autoFocus: true as any,
+  },
+};
+
+export const AllPrimaryStates: Story = {
+  name: 'All Primary States',
+  render: (args) => (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      {(['sm', 'md', 'lg'] as const).map((size) => (
+        <div key={size} style={{ display: 'flex', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+          <Button {...args} size={size} label={`${size} – Default`} />
+          <Button {...args} size={size} label={`${size} – Disabled`} isDisabled />
+        </div>
+      ))}
+    </div>
+  ),
+  args: {
+    variant: 'primary',
+    showLeadingIcon: true,
+    showTrailingIcon: true,
+  },
+};
+
 // ── Disabled ──
 
 export const Disabled: Story = {
